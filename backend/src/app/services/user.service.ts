@@ -7,6 +7,10 @@ export const getUser = async(id: string) => {
     return user;
 }
 
+export const getUsers = async(sort: string, order: string) => {
+    // const users = await all
+}
+
 export const getUserProfile = async(id: string) => {
     const profile = await findProfileById(id);
     if (!profile) throw new NotFoundError(`user with id=${id} does not exist`);

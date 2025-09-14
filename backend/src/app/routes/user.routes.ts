@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getProfile, getUser, getAchievements } from "@controllers/user.controller";
+import { getProfile, getUser, getAchievements, getBestUsers} from "@controllers/user.controller";
 
 const router = Router();
 
