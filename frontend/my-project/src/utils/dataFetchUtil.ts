@@ -1,4 +1,5 @@
 import type { Achievement } from "../AchievementCard";
+import type { UserProfile } from "../state/profileProvider";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -25,5 +26,11 @@ export async function registerForEvent(userId: string, eventId: string) {
 export async function fetchAchievements(userId: string): Promise<Achievement[]> {
     const res = await fetch(`${API_URL}/v1/users/${userId}/achievements`);
     if (!res.ok) throw new Error('Failed to load achievements');
+    return res.json();
+}
+
+export async function fetchProfile(userId: string): Promise<UserProfile> {
+    const res = await fetch(`${API_URL}/v1/users/${userId}/profile`);
+    if (!res.ok) throw new Error('Failed to load profile');
     return res.json();
 }

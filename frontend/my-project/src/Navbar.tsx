@@ -43,7 +43,7 @@ function Navbar() {
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <Link to="/profile" className="h-16 text-xl flex items-center gap-3">
+                        <Link to={`/profile/${profile?.user_id}`} className="h-16 text-xl flex items-center gap-3">
                             {`${profile?.first_name} ${profile?.last_name}`}
                             <div className="avatar">
                                 <div className="w-12 h-12 rounded-full">

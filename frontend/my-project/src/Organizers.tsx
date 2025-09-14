@@ -11,8 +11,8 @@ function Organizers() {
                     <OrganizerEventCard
                         event={{
                             id: "evt_beach_cleanup_1",
-                            organizerId: "org_miami_cleanups",
-                            thumbnailUrl: null,
+                            organizer_id: "org_miami_cleanups",
+                            thumbnail_url: null,
                             name: "Beach Cleanup Day",
                             desc: "Help remove trash and microplastics from shoreline and dunes. Gloves and bags provided. Family friendly.",
                             reward: 40,
@@ -28,6 +28,10 @@ function Organizers() {
                             { id: "att_1", name: "Alice Johnson", email: "alice@example.com", present: false },
                             { id: "att_2", name: "Bob Smith", email: "bob@example.com", present: false },
                         ]}
+                        onSave={() => {
+                            //DEMO DEMO DEMO DEMO DEMO
+                            
+                        }}
                     />
                 </div>
             </div>

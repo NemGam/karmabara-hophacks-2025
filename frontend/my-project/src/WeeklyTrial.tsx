@@ -2,7 +2,7 @@ import CountdownToNextMonday from "./misc/CountdownToNextMonday"
 
 type WeeklyTrialProps = { raised?: number; goal?: number };
 
-export default function WeeklyTrial({ raised = 2095 , goal = 4500 }: WeeklyTrialProps) {
+export default function WeeklyTrial({ raised = 2895 , goal = 4500 }: WeeklyTrialProps) {
   const pct = Math.max(0, Math.min(100, Math.round((raised / goal) * 100)));
 
   return (

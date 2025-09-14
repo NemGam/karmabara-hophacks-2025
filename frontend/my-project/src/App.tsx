@@ -18,7 +18,7 @@ export default function App() {
         <Route path="/virtues" element={<VirtuesPage />} />
         <Route path="/knights" element={<HallOfKnights />} />
         <Route path="/partnership" element={<Partnership />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile/:id" element={<ProfilePage />} />
         <Route path="/organizers" element={<Organizers />} />
       </Routes>
       

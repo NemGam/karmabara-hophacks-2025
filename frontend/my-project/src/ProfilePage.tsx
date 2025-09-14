@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react';
-import OpenChest from './misc/OpenChess';
+import { useEffect, useRef, useState } from 'react';
 import { useProfile } from './hooks/useProfile';
+import { fetchProfile } from './utils/dataFetchUtil';
+import { useParams } from 'react-router-dom';
 
 type Profile = {
     first_name: string;
@@ -30,9 +31,19 @@ const DEFAULT_PROFILE: Profile = {
 
 export default function ProfilePage() {
     const scrollerRef = useRef<HTMLDivElement>(null);
+    const {id} = useParams<{id: string}>();
+    const [profile, setProfile] = useState(null);
 
-    const { profile } = useProfile();
-    console.log(profile);
+    useEffect(() => {
+        const get = async() => {
+            const prof = await fetchProfile(id);
+            setProfile(prof);
+        } 
+
+        get();
+    }, [id])
+    
+
     const joined = new Date(Date.parse(profile?.created_at));
     const [showToast, setShowToast] = useState(false);
 

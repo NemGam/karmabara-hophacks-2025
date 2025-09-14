@@ -1,7 +1,6 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ProfileContext } from "./profileContext";
-
-const API_URL = import.meta.env.VITE_API_URL;
+import { fetchProfile } from "../utils/dataFetchUtil";
 
 export type UserProfile = {
     user_id: string;
@@ -16,11 +15,6 @@ export type UserProfile = {
     background?: string
 };
 
-async function fetchProfile(userId: string): Promise<UserProfile> {
-    const res = await fetch(`${API_URL}/v1/users/${userId}/profile`);
-    if (!res.ok) throw new Error('Failed to load profile');
-    return res.json();
-}
 
 export const ProfileProvider = ({ children }: { children: React.ReactNode }) => {
     const userId = "0";
