@@ -3,6 +3,7 @@ import { getProfile, getUser, getAchievements } from "@controllers/user.controll
 
 const router = Router();
 
+// router.get('/', getBestUsers)
 router.get('/:id', getUser); //Get basic info
 router.get('/:id/profile', getProfile);
 router.get('/:id/achievements', getAchievements);

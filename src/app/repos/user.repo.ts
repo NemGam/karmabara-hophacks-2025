@@ -1,4 +1,4 @@
-import { db } from '../../../src/db';
+import { db } from '@/db';
 
 const findUserByIdStmt = db.prepare('SELECT first_name, last_name, email, phone, role, created_at FROM users WHERE id = ?');
 export const findById = (id: string) => findUserByIdStmt.get(id);

@@ -28,7 +28,9 @@ const init = db.transaction(() => {
         level               INTEGER DEFAULT 0,
         exp                 INTEGER DEFAULT 0,
         events_completed    INTEGER DEFAULT 0,
-        hours_volunteered   INTEGER DEFAULT 0
+        hours_volunteered   INTEGER DEFAULT 0,
+        floating_capa       TEXT,
+        background          TEXT
     );
     `);
 
@@ -37,7 +39,7 @@ const init = db.transaction(() => {
         id            TEXT PRIMARY KEY,
         name          TEXT NOT NULL,
         desc          TEXT,
-        icon_url     TEXT,
+        icon_url      TEXT,
         rarity        TEXT DEFAULT common
     );
     `);
