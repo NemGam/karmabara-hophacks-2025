@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f312b990430d4d4f90a850a983dbc08, type: 3}
+  m_Name: Mummy
+  m_EditorClassIdentifier: 
+  characterName: Steam Man
+  characterPortrait: {fileID: 7221528336568624905, guid: 7bba7e4c147bc7c45babcbdb1a6428bf, type: 3}
+  characterPrefab: {fileID: 6071632638035561799, guid: e663c9f9f2cdd5f4a913d196eb91fd44, type: 3}
